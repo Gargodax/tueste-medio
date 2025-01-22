@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>TuesteMedioWeb</title>
+</head>
+
+<body>
+    <header>
+        <img src="../media/banner.png" alt="Descripción de imagen de banner"> <!-- Banner de página de contacto -->
+        <h1>Tueste Medio</h1>
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="glosario.html">Glosario</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+
+            <h2>Conecta con nosotros</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi eius commodi soluta ea similique eum
+                error
+                ut, quam cumque fugiat at autem porro quos earum modi aut molestias esse tenetur.
+            </p>
+        </section>
+        <section>
+            <form action="" method="post">
+
+                <fieldset>
+
+                    <legend>Información personal</legend>
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre">
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido">
+
+                    <label for="email" method="post">e-mail:</label>
+                    <input type="email" id="email">
+
+                    <label for="genero">Género:</label>
+                    <input type="radio" name="genero" id="hombre" value="hombre">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="genero" id="mujer" value="mujer">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" name="genero" id="otro" value="otro">
+                    <label for="otro">Otro</label>
+                    <input type="radio" name="genero" id="noResponde" value="noResponde">
+                    <label for="noResponde">Prefiero no responder</label>
+
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Contenido del mensaje</legend>
+
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" rows="12" cols="60" placeholder="Escribí tu mensaje..."></textarea>
+
+                </fieldset>
+                <input type="checkbox" name="acepta" id="acepta">
+                <label for="acepta">Acepto que <b>Tueste medio</b> envíe iformación a mi correo</label>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <!-- pie de página -->
+    <footer>
+        <p>© 2024-2025 Axel Garay Godoy | Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
