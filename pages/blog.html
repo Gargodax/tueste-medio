@@ -4,60 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <title>TuesteMedioWeb</title>
 </head>
 
 <body>
     <header>
-        <h1>Tueste Medio</h1>
         <!-- Menú de navegación -->
-        <nav>
-            <!-- Lista de enlaces -->
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="glosario.html">Glosario</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+
+        <nav class="container-fluid position-fixed navbar navbar-expand-lg p-0" data-bs-theme="dark">
+            <div class="navigation container-fluid p-0">
+                <a class="navbar-brand" href="/index.html">
+                    <h1 class="brand-name">Tueste Medio</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Lista de enlaces -->
+                <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="glosario.html">Glosario</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- Contenido principal -->
-    <main>
-        <h2>Bienvenidos a nuestro blog cafetero</h2>
+    <main class="blog-main">
+        <h1>Bienvenidos a nuestro café blog</h1>
         <hr>
-        <span>
-            <img src="../media/imagen-generica.jpg" alt="Imagen genérica para artículo de blog">
-            <p>Título de artículo</p>
-        </span>
-        <span>
-            <img src="../media/imagen-generica.jpg" alt="Imagen genérica para artículo de blog">
-            <p>Título de artículo</p>
-        </span>
-        <span>
-            <img src="../media/imagen-generica.jpg" alt="Imagen genérica para artículo de blog">
-            <p>Título de artículo</p>
-        </span>
-        <span>
-            <img src="../media/imagen-generica.jpg" alt="Imagen genérica para artículo de blog">
-            <p>Título de artículo</p>
-        </span>
-        <span>
-            <img src="../media/imagen-generica.jpg" alt="Imagen genérica para artículo de blog">
-            <p>Título de artículo</p>
-        </span>
-        <span>
-            <img src="../media/imagen-generica.jpg" alt="Imagen genérica para artículo de blog">
-            <p>Título de artículo</p>
-        </span>
-        
+        <a href="#">
+            <article>
+                <img src="../media/pics/basic-coffee-img.png"
+                alt="frase 'i love coffee' representada con una cuchara, granos de café formando un corazón y una taza de café vista desde arriba">
+                <h3>Qué esperar al adentrarse en el mundo del café</h3>
+            </article>
+        </a>
+        <a href="#">
+            <article>
+                <img src="../media/pics/basic-coffee-img.png"
+                alt="Salón de cafetería con decoración ambientación hecha con madera, con ventanales a la izquierda y barra a la derecha">
+                <h3>Buscando cafetería: El sitio perfecto para mí</h3>
+            </article>
+        </a>
+        <a href="#">
+            <article>
+                <img src="../media/pics/basic-coffee-img.png"
+                alt="Taza de café redonda de color blanco con arte latte en forma de espiga de trigo sobre fondo opaco">
+                <h3>¿Cómo lo hacen?</h3>
+            </article>
+        </a>
+        <a href="#">
+            <article>
+                <h3>Métodos... Sabores</h3>
+                <img src="media/pics/coffee-methods.jpg"
+                    alt="Taza de café redonda de color blanco con arte latte en forma de espiga de trigo sobre fondo opaco">
+            </article>
+        </a>
+
     </main>
     <!-- Pie de página -->
     <footer>
         <p>© 2024-2025 Axel Garay Godoy | Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

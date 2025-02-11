@@ -6,47 +6,146 @@
 }
 
 /* Estilos generales */
-
 * {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
+    scrollbar-width: none;
 }
 
 body {
+    display: grid;
+    grid-template-rows: repeat(2, auto) 1fr;
+    text-align: center;
     background: rgb(255, 180, 138);
+    background-repeat: no-repeat;
     background: linear-gradient(157deg, rgba(255, 180, 138, 1) 0%, rgba(37, 105, 141, 1) 100%);
+    width: 100dvw;
+    min-height: 100dvh;
+}
+
+hr {
+    color: transparent;
+}
+
+h2 {
+    place-self: center;
+    width: fit-content;
+    font-size: 1.5em;
+    text-decoration: underline 1px;
+    letter-spacing: .05em;
 }
 
 /* Estilos de sección header */
 
-header h1 {
-    font-size: 3.5em;
+.hero {
+    width: 100%;
 }
 
-header nav ul li,
-main ul li {
-    list-style: none;
+.brand-name {
+    margin: 0;
+    padding: 0 .5em;
+    color: whitesmoke;
     font-size: 1.5em;
-    font-weight: 500;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline 1px;
+    letter-spacing: .1em;
 }
 
-header nav ul li a,
-main ul li a {
-    list-style: none;
-    letter-spacing: normal;
-    color: black;
+.home-navigation {
+    background: rgba(0, 0, 0, .75);
+}
+
+.navigation {
+    background: rgba(0, 0, 0, .95);
+}
+
+.nav-link {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 /* Estilos de sección main */
 
-main ul li a {
-    font-size: 1.2em;
+main {
+    padding-top: 5em;
+}
+
+.home-main {
+    padding-top: 0;
+}
+
+.home-title {
+    width: 90%;
+    padding: .3em;
+    place-self: center;
+    mix-blend-mode: overlay;
+    font-size: 1.5em;
+    text-wrap-style: pretty;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(225, 225, 225, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    color: rgba(0, 0, 0, .80);
+    border-radius: 30em;
+}
+
+.home-title p {
     margin: 0;
-    padding: 0 .2em;
+}
+
+.title-2 {
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline 1px;
+    letter-spacing: .05em;
+}
+
+.lead-articles {
+    margin: .5em;
+    display: grid;
+    gap: .5em;
+    position: relative;
+}
+
+.lead-articles a:last-child {
+    display: none;
+}
+
+.lead-articles article {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
+.lead-articles a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lead-articles a {
+    height: 7.5em;
+    overflow: hidden;
+    border: 1px solid goldenrod;
+    border-radius: .625em;
+    /* box-shadow: 7px 7px darkgrey; */
+    margin: .5em .2em;
+    text-decoration: none;
+}
+
+.lead-articles a article h3 {
+    font-size: 1.25em;
+    font-style: oblique;
+    position: absolute;
+    width: 100%;
+    color: whitesmoke;
+    text-align: start;
+    padding: .2em .3em;
+    background: linear-gradient(to bottom, black 10%, rgb(0 0 0 / 50%) 100%);
 }
 
 .definition {
-
     align-items: center;
 }
 
@@ -56,8 +155,75 @@ article span p {
 }
 
 /* Estilos de sección footer */
+footer {
+    margin: .5em;
+    padding-top: .5em;
+}
 
 footer p {
     font-size: .8em;
     font-weight: 600;
+}
+
+/* Media queries */
+
+/*pantallas pequeñas*/
+
+@media only screen and (max-width: 767px) {}
+
+/* Pantallas medianas */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .nav-link {
+        font-size: 1.6em;
+    }
+
+    .lead-articles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        width: 90%;
+        place-self: center;
+    }
+
+    .lead-articles a {
+        height: 15em;
+    }
+
+    .lead-articles a:last-child {
+        display: inline;
+    }
+}
+
+/* Pantallas grandes*/
+
+@media screen and (min-width: 992px) {
+
+    .nav-link {
+        font-size: 1.2em;
+    }
+
+    .lead-articles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        width: 90%;
+        place-self: center;
+    }
+
+    .lead-articles a {
+        height: 15em;
+    }
+
+    .lead-articles a:hover {
+        box-shadow: 10px 10px 1.5em black;
+        filter: grayscale(0);
+        transform: scale(105%);
+        transition: all .2s;
+    }
+
+    .lead-articles:hover>* {
+        filter: grayscale(80%);
+    }
+
+    .lead-articles a:last-child {
+        display: inline;
+    }
 }
