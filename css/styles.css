@@ -17,10 +17,6 @@
 
 body {
     display: grid;
-    /* grid-template-rows: repeat(2, auto) 1fr; */
-    /* background: rgb(255, 180, 138); */
-    /* background-repeat: no-repeat; */
-    /* width: 100dvw; */
     min-height: 100dvh;
     text-align: center;
     background: linear-gradient(157deg, rgba(255, 180, 138, 1) 0%, rgba(37, 105, 141, 1) 100%);
@@ -31,7 +27,7 @@ hr {
 }
 
 h1 {
-    font-size: 1.5;
+    font-size: 2em;
 }
 
 h2 {
@@ -43,7 +39,7 @@ h2 {
 /* ------------------- Estilos de sección header ------------------- */
 
 header {
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero {
@@ -170,6 +166,20 @@ article span p {
     width: 100%;
 }
 
+.blog-title {
+    padding: .5em;
+    width: 100%;
+    position: sticky;
+    top: 3.5em;
+    justify-self: center;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(2em);
+    mix-blend-mode: overlay;
+    color: black;
+    margin-top: -1.45em;
+    z-index: 1;
+}
+
 .blog-posts {
     display: grid;
     gap: 2.5em;
@@ -213,8 +223,18 @@ article span p {
 
 /* main de galería */
 
-.gallery-main {
+.gallery-title {
+    padding: .5em;
+    width: 100%;
+    position: sticky;
+    top: 3.5em;
+    justify-self: center;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(2em);
+    mix-blend-mode: overlay;
     color: black;
+    margin-top: -1.45em;
+    z-index: 1;
 }
 
 .gallery {
@@ -230,6 +250,108 @@ article span p {
     object-fit: cover;
     border: 1px solid black;
     border-radius: .5em;
+    animation: appear linear;
+    animation-timeline: view();
+}
+
+@keyframes appear {
+    0% {
+        scale: 0.5;
+        opacity: 0;
+    }
+
+    33% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    66% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 0.5;
+        opacity: 0;
+    }
+}
+
+/* main de glosario */
+
+.glossary-main {
+    padding-top: 3.5em;
+}
+
+.glossary-title {
+    padding: .5em;
+    width: 100%;
+    position: sticky;
+    top: 3.2em;
+    justify-self: center;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(2em);
+    mix-blend-mode: overlay;
+    color: black;
+    z-index: 1;
+}
+
+.glossary-nav {
+    justify-self: center;
+    width: 100%;
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .2em;
+    list-style: none;
+}
+
+.glossary-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: .25em;
+}
+
+.glossary-nav a:hover {
+    color: rgba(225, 225, 225, .8);
+}
+
+.terms-list {
+    margin: -1em 0;
+}
+
+.letter p {
+    margin: .2em 0;
+    font-size: 3.5em;
+    mix-blend-mode: overlay;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(225, 225, 225, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    color: black;
+    position: relative;
+}
+
+.definition-list dl{
+    mix-blend-mode: color-burn;
+}
+
+
+/* main de contacto */
+
+.contact-main {
+    padding-top: 3.5em;
+}
+
+.contact-title {
+    padding: .5em;
+    width: 100%;
+    position: sticky;
+    top: 3.2em;
+    justify-self: center;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(2em);
+    mix-blend-mode: overlay;
+    color: black;
 }
 
 /* ------------------- Estilos de sección footer ------------------- */
@@ -438,7 +560,7 @@ footer p {
     .blog-posts a {
         width: 100%;
     }
-    
+
     .gallery {
         width: 90%;
         grid-template-columns: repeat(6, 1fr);
@@ -446,6 +568,8 @@ footer p {
 
     .gallery img {
         min-width: 100%;
+        /* animation: appear linear;
+        animation-timeline: view(); */
     }
 
     .img-container:nth-child(1) {
@@ -549,4 +673,5 @@ footer p {
         grid-column-start: span 3;
         grid-row-start: span 1;
     }
+
 }
