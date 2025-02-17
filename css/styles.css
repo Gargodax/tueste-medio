@@ -331,7 +331,7 @@ article span p {
     position: relative;
 }
 
-.definition-list dl{
+.definition-list dl {
     mix-blend-mode: color-burn;
 }
 
@@ -339,19 +339,96 @@ article span p {
 /* main de contacto */
 
 .contact-main {
-    padding-top: 3.5em;
+    margin: 5em 0;
+    width: 90%;
+    padding: 0;
+    border: 1.5px solid black;
+    border-radius: 1em;
+    overflow: hidden;
+    place-self: center;
 }
 
 .contact-title {
     padding: .5em;
-    width: 100%;
-    position: sticky;
-    top: 3.2em;
-    justify-self: center;
     background: rgba(0, 0, 0, .2);
     backdrop-filter: blur(2em);
     mix-blend-mode: overlay;
     color: black;
+    font-size: 1.2em;
+}
+
+.contact-form form {
+    width: 100%;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.personal-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset span {
+    text-align: start;
+    width: 75%;
+    height: 4em;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset input {
+    height: 2em;
+    border-radius: .3em;
+}
+
+.gender {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-around;
+}
+
+.gender div {
+    display: flex;
+    align-items: center;
+}
+
+.gender div label {
+    margin-left: .2em;
+    font-size: 1em;
+}
+
+.msg-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.msg-info textarea {
+    width: 100%;
+}
+
+.accept {
+    margin: .5em;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+}
+
+.contact-form form button {
+    place-self: center;
+    width: 40%;
+    height: 2em;
+    border-radius: .5em;
 }
 
 /* ------------------- Estilos de sección footer ------------------- */
@@ -517,6 +594,10 @@ footer p {
         grid-column-start: span 12;
         grid-row-start: span 2;
     }
+
+    .contact-main {
+        width: 75%;
+    }
 }
 
 /* Pantallas grandes*/
@@ -568,8 +649,6 @@ footer p {
 
     .gallery img {
         min-width: 100%;
-        /* animation: appear linear;
-        animation-timeline: view(); */
     }
 
     .img-container:nth-child(1) {
@@ -674,4 +753,7 @@ footer p {
         grid-row-start: span 1;
     }
 
+    .contact-main {
+        width: 60%;
+    }
 }

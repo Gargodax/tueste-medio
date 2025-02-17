@@ -52,50 +52,71 @@
     <main class="contact-main">
         <section class="contact-title">
             <h1>Conecta con nosotros</h1>
-            <p>En este espacio podrás contactarte para sugerir cambios o mejoras, brindar ideas, hacer pedidos o simplemente
-                expresarte y contarnos qué opinas de este espacio. ¡Esperamos tus mensajes!
+            <p>Aquí podrás contactarte para sugerir cambios o mejoras, brindar ideas, hacer pedidos o
+                simplemente expresarte y contarnos qué opinas de este espacio. ¡Esperamos tus mensajes!
             </p>
         </section>
         <section class="contact-form">
             <form action="" method="post">
 
-                <fieldset>
+                <fieldset class="personal-info">
 
                     <legend>Información personal</legend>
 
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre">
-
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido">
-
-                    <label for="email" method="post">e-mail:</label>
-                    <input type="email" id="email">
-
-                    <label for="genero">Género:</label>
-                    <input type="radio" name="genero" id="hombre" value="hombre">
-                    <label for="hombre">Hombre</label>
-                    <input type="radio" name="genero" id="mujer" value="mujer">
-                    <label for="mujer">Mujer</label>
-                    <input type="radio" name="genero" id="otro" value="otro">
-                    <label for="otro">Otro</label>
-                    <input type="radio" name="genero" id="noResponde" value="noResponde">
-                    <label for="noResponde">Prefiero no responder</label>
+                    <span>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre">
+                    </span>
+                    <span>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido">
+                    </span>
+                    <span>
+                        <label for="email" method="post">e-mail:</label>
+                        <input type="email" id="email">
+                    </span>
+                    <span>
+                        <label for="genero">Género:</label>
+                        <div class="gender">
+                            <div>
+                                <input type="radio" name="genero" id="hombre" value="hombre">
+                                <label for="hombre">Hombre</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="genero" id="mujer" value="mujer">
+                                <label for="mujer">Mujer</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="genero" id="otro" value="otro">
+                                <label for="otro">Otro</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="genero" id="noResponde" value="noResponde">
+                                <label for="noResponde">Prefiero no responder</label>
+                            </div>
+                        </div>
+                    </span>
 
                 </fieldset>
-                <br>
-                <fieldset>
+
+                <fieldset class="msg-info">
+
                     <legend>Contenido del mensaje</legend>
-
-                    <label for="asunto">Asunto:</label>
-                    <input type="text" id="asunto">
-
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" placeholder="Escribí tu mensaje..."></textarea>
+                    <span>
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto">
+                    </span>
+                    <span>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" placeholder="Escribí tu mensaje..."></textarea>
+                    </span>
+                    <span class="accept">
+                        <input type="checkbox" name="acepta" id="acepta">
+                        <label for="acepta">Acepto que <b>Tueste medio</b> envíe información a mi correo.</label>
+                    </span>
 
                 </fieldset>
-                <input type="checkbox" name="acepta" id="acepta">
-                <label for="acepta">Acepto que <b>Tueste medio</b> envíe información a mi correo</label>
+                <hr>
                 <button type="submit">Enviar</button>
             </form>
         </section>
