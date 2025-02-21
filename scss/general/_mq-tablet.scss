@@ -1,0 +1,127 @@
+@import "../utils/variables";
+@import "../utils/lists";
+@import "../utils/mixin";
+
+
+/* Estilos para pantallas medianas */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .nav-link {
+        font-size: 1.6em;
+    }
+
+    .lead-articles {
+        @include lead-articles-mq;
+
+        a {
+            height: 15em;
+        }
+
+        a:last-child {
+            display: inline;
+        }
+    }
+
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+
+        a {
+            width: 100%;
+        }
+    }
+
+    .gallery {
+        grid-template-columns: repeat(12, 1fr);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .img-container:nth-child(1) {
+        @include grid-img-place(span 12, span 1);
+    }
+
+    .img-container:nth-child(2) {
+        @include grid-img-place(span 6, span 1);
+    }
+
+    .img-container:nth-child(3) {
+        @include grid-img-place(span 6, span 1);
+        place-self: start;
+    }
+
+    .img-container:nth-child(4) {
+        @include grid-img-place(span 6, span 2);
+    }
+
+    .img-container:nth-child(5) {
+        @include grid-img-place(span 6, span 2);
+    }
+
+    .img-container:nth-child(6) {
+        @include grid-img-place(span 12, span 2);
+    }
+
+    .img-container:nth-child(7) {
+        @include grid-img-place(span 6, span 1);
+    }
+
+    .img-container:nth-child(8) {
+        @include grid-img-place(span 6, span 1);
+    }
+
+    .img-container:nth-child(9) {
+        @include grid-img-place(span 6, span 3);
+    }
+
+    .img-container:nth-child(10) {
+        @include grid-img-place(span 6, span 3);
+    }
+
+    .img-container:nth-child(11) {
+        @include grid-img-place(span 6, span 2);
+    }
+
+    .img-container:nth-child(12) {
+        @include grid-img-place(span 6, span 2);
+    }
+
+    .img-container:nth-child(13) {
+        @include grid-img-place(span 12, span 2);
+    }
+
+    .img-container:nth-child(14) {
+        @include grid-img-place(span 12, span 2);
+    }
+
+    .img-container:nth-child(15) {
+        @include grid-img-place(span 6, span 2);
+    }
+
+    .img-container:nth-child(16) {
+        @include grid-img-place(span 6, span 2);
+    }
+
+    .img-container:nth-child(17) {
+        @include grid-img-place(span 6, span 2);
+    }
+
+    .img-container:nth-child(18) {
+        @include grid-img-place(span 6, span 2);
+    }
+
+    .img-container:nth-child(19) {
+        @include grid-img-place(span 12, span 2);
+    }
+
+    .img-container:nth-child(20) {
+        @include grid-img-place(span 12, span 2);
+    }
+
+    .contact-main {
+        width: 75%;
+    }
+
+}

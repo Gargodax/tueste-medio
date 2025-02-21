@@ -1,0 +1,21 @@
+//Imports
+//Variables
+@import "utils/variables";
+
+//Listas
+@import "utils/lists";
+
+//Mixins
+@import "utils/mixin";
+
+//Generales
+@import "general/reset";
+@import "general/global";
+
+/* Media queries*/
+
+// Pantallas medianas
+@import "general/mq-tablet";
+
+// Pantallas grandes
+@import "general/mq-desktop";

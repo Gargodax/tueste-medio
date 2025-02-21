@@ -1,0 +1,86 @@
+@import "../utils/variables";
+@import "../utils/lists";
+@import "../utils/mixin";
+
+/* ------------------- Estilos generales ------------------- */
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    scrollbar-width: none;
+}
+
+body {
+    display: grid;
+    min-height: 100dvh;
+    text-align: center;
+    background: $bg-gradient;
+}
+
+hr {
+    color: nth($list-color, 4)
+}
+
+h1 {
+    font-size: nth($list-font-sizes, 4);
+}
+
+h2 {
+    place-self: center;
+    width: fit-content;
+    text-decoration: underline 1px;
+}
+
+header {
+    z-index: 2;
+}
+
+main {
+    padding-top: 5em;
+}
+
+.hero {
+    width: 100%;
+}
+
+.brand-name {
+    margin: 0;
+    padding: 0 .5em;
+    color: whitesmoke;
+    font-size: 1.5em;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline 1px;
+    letter-spacing: .1em;
+}
+
+.home-navigation {
+    background: rgba(0, 0, 0, .75);
+}
+
+.navigation {
+    background: rgba(0, 0, 0, .95);
+}
+
+.nav-link {
+    font-size: nth($list-font-sizes, 3);
+    font-weight: 600;
+}
+
+@import "main";
+
+/* -------------- Estilos de sección footer -------------- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: .5em;
+    padding-top: .5em;
+
+    p {
+        font-size: nth($list-font-sizes , 1);
+        font-weight: 600;
+    }
+}

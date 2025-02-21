@@ -1,0 +1,42 @@
+//mixin con parámetros
+
+
+@mixin grid($grid, $column, $row) {
+    display: $grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+}
+
+@mixin grid-img-place ($column, $row) {
+    grid-column-start: $column;
+    grid-row-start: $row;
+}
+
+
+//mixin sin parámetros
+
+@mixin font-props {
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin title {
+    padding: .5em;
+    width: 100%;
+    position: sticky;
+    top: 3.5em;
+    justify-self: center;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(2em);
+    mix-blend-mode: overlay;
+    color: nth($list-color , 1);
+    margin-top: -1.45em;
+    z-index: 1;
+}
+
+@mixin lead-articles-mq {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    place-self: center;
+}

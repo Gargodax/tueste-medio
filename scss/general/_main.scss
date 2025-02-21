@@ -1,0 +1,342 @@
+@import "../utils/variables";
+@import "../utils/lists";
+@import "../utils/mixin";
+
+/* ------------------- Estilos de sección main ------------------- */
+
+/* Main de home */
+
+.home-main {
+    padding-top: 0;
+}
+
+.home-title {
+    width: 90%;
+    padding: .3em;
+    place-self: center;
+    mix-blend-mode: overlay;
+    font-size: nth($list-font-sizes , 3);
+    background: nth($list-gradient , 1);
+    color: $bg-navigation;
+    border-radius: 30em;
+}
+
+.home-title {
+    p {
+        margin: 0;
+    }
+}
+
+.title-2 {
+    @include font-props;
+    text-decoration: underline 1px;
+    letter-spacing: .05em;
+}
+
+.lead-articles {
+    margin: .5em;
+    display: grid;
+    gap: .5em;
+    position: relative;
+    z-index: -1;
+
+    a {
+        height: 7.5em;
+        overflow: hidden;
+        border: 1px solid goldenrod;
+        border-radius: .625em;
+        margin: .5em .2em;
+        text-decoration: none;
+
+        article {
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            position: relative;
+
+            h3 {
+                font-size: nth($list-font-sizes , 2);
+                font-style: oblique;
+                position: absolute;
+                width: 100%;
+                color: nth($list-color , 2);
+                text-align: start;
+                padding: .2em .3em;
+                background: nth($list-gradient , 2);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    a:last-child {
+        display: none;
+    }
+}
+
+/* Main de blog */
+
+.blog-main {
+    width: 100%;
+}
+
+.blog-title {
+    @include title;
+}
+
+.blog-posts {
+    display: grid;
+    gap: 2.5em;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: nth($list-color , 1);
+        width: 90vw;
+        height: auto;
+        overflow: hidden;
+
+        article {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                height: 15em;
+                object-fit: cover;
+                border-bottom: 1px solid black;
+                border-radius: .5em .5em 0 0;
+            }
+
+            h3 {
+                padding: 0 .2em;
+                font-size: nth($list-font-sizes , 2);
+                font-style: oblique;
+                height: 3em;
+                mix-blend-mode: overlay;
+                background: nth($list-gradient , 1);
+                color: nth($list-color , 1);
+                text-align: center;
+                border-radius: 0 0 .5em .5em;
+                border-bottom: 1px solid black;
+                align-content: center;
+            }
+        }
+    }
+}
+
+/* Main de galería */
+
+.gallery-title {
+    @include title;
+}
+
+.gallery {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    align-items: center;
+}
+
+.img-container {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid black;
+        border-radius: .5em;
+        animation: appear linear;
+        animation-timeline: view();
+    }
+}
+
+@keyframes appear {
+    0% {
+        scale: 0.5;
+        opacity: 0;
+    }
+
+    33% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    66% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 0.5;
+        opacity: 0;
+    }
+}
+
+/* Main de glosario */
+
+.glossary-main {
+    padding-top: 2em;
+}
+
+.glossary-title {
+    @include title;
+    margin-top: 1.5em;
+}
+
+.glossary-nav {
+    justify-self: center;
+    width: 100%;
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .2em;
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        color: nth($list-color, 1);
+        font-size: 1.5em;
+        font-weight: 600;
+        letter-spacing: .25em;
+
+    }
+
+    a:hover {
+        color: nth($list-color, 3);
+    }
+}
+
+.terms-list {
+    margin: -1em 0;
+}
+
+article {
+    span {
+        p {
+            font-size: nth($list-font-sizes, 6);
+            margin: 0 1em;
+        }
+    }
+}
+
+.letter {
+    p {
+        margin: .2em 0;
+        font-size: nth($list-font-sizes, 5);
+        mix-blend-mode: overlay;
+        background: nth($list-gradient, 1);
+        color: nth($list-color , 1);
+        position: relative;
+    }
+}
+
+.definition-list {
+    dl {
+        mix-blend-mode: color-burn;
+    }
+}
+
+/* main de contacto */
+
+.contact-main {
+    margin: 5em 0;
+    width: 90%;
+    padding: 0;
+    border: 1.5px solid black;
+    border-radius: 1em;
+    overflow: hidden;
+    place-self: center;
+}
+
+.contact-title {
+    padding: .5em;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(2em);
+    mix-blend-mode: overlay;
+    color: nth($list-color , 1);
+    font-size: nth($list-font-sizes , 2);
+}
+
+.contact-form {
+    form {
+        width: 100%;
+        padding: .5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+.personal-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset {
+    span {
+        text-align: start;
+        width: 75%;
+        height: 4em;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            height: 2em;
+            border-radius: .3em;
+        }
+    }
+
+}
+
+.gender {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-around;
+
+    div {
+        display: flex;
+        align-items: center;
+
+        label {
+            margin-left: .2em;
+            font-size: 1em;
+        }
+    }
+}
+
+.msg-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    textarea {
+        width: 100%;
+    }
+}
+
+.accept {
+    margin: .5em;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+}
+
+.contact-form form button {
+    place-self: center;
+    width: 40%;
+    height: 2em;
+    border-radius: .5em;
+}
