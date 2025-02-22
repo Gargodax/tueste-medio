@@ -145,6 +145,14 @@
         place-self: center;
     }
 
+    article {
+        span {
+            p {
+                scroll-margin-top: 30vh;
+            }
+        }
+    }
+
     .contact-main {
         width: 60%;
     }

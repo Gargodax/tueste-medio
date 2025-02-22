@@ -295,7 +295,7 @@ main {
 article span p {
   font-size: 5em;
   margin: 0 1em;
-  scroll-margin-top: 30vh;
+  scroll-margin-top: 50vh;
 }
 
 .letter p {
@@ -532,6 +532,9 @@ footer p {
     width: 75%;
     place-self: center;
   }
+  article span p {
+    scroll-margin-top: 30vh;
+  }
   .contact-main {
     width: 75%;
   }
@@ -664,6 +667,9 @@ footer p {
   .terms-list {
     width: 75%;
     place-self: center;
+  }
+  article span p {
+    scroll-margin-top: 30vh;
   }
   .contact-main {
     width: 60%;
