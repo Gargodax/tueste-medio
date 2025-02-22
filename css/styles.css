@@ -295,6 +295,7 @@ main {
 article span p {
   font-size: 5em;
   margin: 0 1em;
+  scroll-margin-top: 30vh;
 }
 
 .letter p {
@@ -523,6 +524,10 @@ footer p {
     grid-column-start: span 12;
     grid-row-start: span 2;
   }
+  .terms-list {
+    width: 75%;
+    place-self: center;
+  }
   .contact-main {
     width: 75%;
   }
@@ -647,6 +652,10 @@ footer p {
   .img-container:nth-child(20) {
     grid-column-start: span 3;
     grid-row-start: span 1;
+  }
+  .terms-list {
+    width: 75%;
+    place-self: center;
   }
   .contact-main {
     width: 60%;

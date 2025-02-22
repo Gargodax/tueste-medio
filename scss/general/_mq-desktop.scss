@@ -132,6 +132,11 @@
         @include grid-img-place(span 3, span 1);
     }
 
+    .terms-list {
+        width: 75%;
+        place-self: center;
+    }
+    
     .contact-main {
         width: 60%;
     }
