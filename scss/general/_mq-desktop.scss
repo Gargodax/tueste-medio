@@ -6,6 +6,11 @@
         font-size: nth($list-font-sizes , 2);
     }
 
+    .title-2 {
+        letter-spacing: .05em;
+        font-size: nth($list-font-sizes , 4);
+    }
+
     .lead-articles {
         width: 90%;
         @include lead-articles-mq;
@@ -136,7 +141,7 @@
         width: 75%;
         place-self: center;
     }
-    
+
     .contact-main {
         width: 60%;
     }

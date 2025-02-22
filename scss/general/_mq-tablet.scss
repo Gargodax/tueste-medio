@@ -11,6 +11,11 @@
         font-size: 1.6em;
     }
 
+    .title-2 {
+        letter-spacing: .05em;
+        font-size: nth($list-font-sizes , 4);
+    }
+
     .lead-articles {
         @include lead-articles-mq;
 

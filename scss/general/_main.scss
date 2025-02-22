@@ -30,7 +30,7 @@
 .title-2 {
     @include font-props;
     text-decoration: underline 1px;
-    letter-spacing: .05em;
+    font-size: nth($list-font-sizes , 3);
 }
 
 .lead-articles {
