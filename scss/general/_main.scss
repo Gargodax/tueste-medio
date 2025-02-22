@@ -71,11 +71,13 @@
             height: 100%;
             object-fit: cover;
         }
+
+        &:last-child {
+            display: none;
+        }
     }
 
-    a:last-child {
-        display: none;
-    }
+
 }
 
 /* Main de blog */
@@ -204,11 +206,12 @@
         font-weight: 600;
         letter-spacing: .25em;
 
+        &:hover {
+            color: nth($list-color, 3);
+        }
     }
 
-    a:hover {
-        color: nth($list-color, 3);
-    }
+
 }
 
 .terms-list {

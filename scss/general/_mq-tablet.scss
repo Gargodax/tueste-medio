@@ -21,10 +21,10 @@
 
         a {
             height: 15em;
-        }
 
-        a:last-child {
-            display: inline;
+            &:last-child {
+                display: inline;
+            }
         }
     }
 

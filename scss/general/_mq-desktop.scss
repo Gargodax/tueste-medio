@@ -18,26 +18,29 @@
 
         a {
             height: 15em;
+
+            &:last-child {
+                display: inline;
+            }
+
+            &:hover {
+                box-shadow: 10px 10px 1.5em black;
+                filter: grayscale(0);
+                transform: scale(105%);
+                transition: all .2s;
+            }
         }
 
-        a:last-child {
-            display: inline;
+        &:hover {
+            >* {
+                filter: grayscale(80%);
+            }
+
         }
 
-        a:hover {
-            box-shadow: 10px 10px 1.5em black;
-            filter: grayscale(0);
-            transform: scale(105%);
-            transition: all .2s;
-        }
     }
 
-    .lead-articles:hover {
-        >* {
-            filter: grayscale(80%);
-        }
 
-    }
 
     .blog-posts {
         grid-template-columns: repeat(3, 1fr);
